@@ -1,0 +1,19 @@
+<form name="loginform">
+  <div class="list">
+    <label class="item item-input">
+      <input type="text" style="width:100%" name="username" placeholder="Username" ng-model="loginDetails.username" required>
+    </label>
+    <label class="item item-input">
+      <input type="password" name="password" placeholder="Password" ng-model="loginDetails.password" required>
+    </label>
+  </div>
+  <button class="button button-dark button-block button-positive" style="width: 50%;margin: 0 auto;" ng-disabled="loginform.$invalid || loginLoading" ng-click="login()">
+    <ion-spinner ng-if="loginLoading"></ion-spinner>
+    <span ng-hide="loginLoading">Log In</span>
+  </button>
+</form>
+<div class="bar bar-footer bar-stable hide-on-keyboard-open">
+  <a ng-href="#/auth/signup" style="margin:auto;text-decoration:none;color:#444">
+    Don't have an account? <b>Sign Up</b>
+  </a>
+</div>

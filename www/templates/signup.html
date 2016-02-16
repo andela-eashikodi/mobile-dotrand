@@ -1,0 +1,11 @@
+<div style="width:60%;margin:30px auto 0 auto;">
+  <div style="font-weight:bolder;width:100%">Enter phone number</div>
+  <input style="border:1px solid #000;width:100%" id="mobile-number" preferred-countries="ng, us, gb" ng-model="phone" type="tel" name="phone" value="" ng-click="inputNumber()" international-phone-number>
+  <input id="hidden" type="hidden" name="phone-full">
+  <button class="button button-dark button-block button-positive" style="width: 100%;margin: 10px auto;" ng-click="enterPhoneNumber()">Next</button>
+</div>
+<div class="bar bar-footer bar-stable hide-on-keyboard-open">
+  <a ng-href="#/auth/login" style="margin:auto;text-decoration:none;color:#444">
+    Already have an account? <b>Log In</b>
+  </a>
+</div>

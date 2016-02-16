@@ -1,1 +1,26 @@
 /* Empty. Add your own CSS if you like */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.error-message {
+  margin-top: 0;
+  height: 10px;
+  font-size: 10px;
+  color: red;
+}
+
+.login-page {
+  height: 50vh;
+}
+
+.spinner svg {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  fill: #000;
+  padding-top: 5px
+}
