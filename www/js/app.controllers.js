@@ -1,6 +1,6 @@
 angular.module('dotrand.controllers', [])
 
-.controller('authCtrl', function($scope, $rootScope, $location, $timeout, Toast, User, $timeout, $cordovaToast) {
+.controller('authCtrl', function($scope, $rootScope, $location, $timeout, Toast, User, $cordovaToast) {
   
   $scope.login = function() {
     $location.url('/tab/chats');
@@ -69,7 +69,7 @@ angular.module('dotrand.controllers', [])
 
     if (ionic.Platform.isAndroid()) {
       opts.hasPhoneNumber = true;         //hasPhoneNumber only works for android.
-    };
+    }
     
     // console.log(navigator.contacts);
     $cordovaContacts.find(opts).then(function(allContacts) {

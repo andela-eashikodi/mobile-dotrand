@@ -18,26 +18,24 @@ angular.module('dotrand.services', [])
   };
   return {
     successToast: function(msg) {
-      toastr["success"](msg);
+      toastr.success(msg);
     },
     errorToast: function(msg) {
-      toastr["error"](msg);
+      toastr.error(msg);
     }
-  }
+  };
 })
 
-.factory('BaseUrl', function() {
-  return 'http://10.0.2.2:2016'
-  // return 'http://localhost:2016';
-  // return 'https://dotrand-api.herokuapp.com'
-})
+.value('BaseUrl', 'http://10.0.2.2:2016')
+// .value('BaseUrl', 'http://localhost:2016')
+// .value('https://dotrand-api.herokuapp.com')
 
 .factory('User', function($http, BaseUrl) {
   return {
     authenticate: function(info) {
       return $http.post(BaseUrl + '/user/authenticate', info);
     }
-  }
+  };
 })
 
 .factory('Chats', function($cordovaContacts, $ionicPlatform) {
